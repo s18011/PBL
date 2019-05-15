@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>KOBE</title>
+    </head>
+    <body>
+      <div class="main">
+        <div id="cont">神戸市民の声</div>
+        </div>
+      <p>お名前<br>
+      <input type="text" name="name"></p>
+      <p>問題箇所の詳細<br>
+        <textarea name="comment" cols="40" rows="8">
+          </textarea>
+          <input type="file" id="target" accept="image/*">
+          <script src="js/pbl.js"></script>
+          <img id="myImage" width="220" height="200">
+
+          <button onclick="getPosition();">位置情報を取得する</button>
+          <input type="text" id="target" accept="getPosition">
+
+
+          <p><input type="button" value="送信する" id="button1"></p>
+
+
+          <script>
+    // Geolocation APIに対応している
+    if (navigator.geolocation) {
+      alert("この端末では位置情報が取得できます");
+    // Geolocation APIに対応していない
+    } else {
+      alert("この端末では位置情報が取得できません");
+    }
+
+    // 現在地取得処理
+    function getPosition() {
+      // 現在地を取得
+      navigator.geolocation.getCurrentPosition(
+        // 取得成功した場合
+        function(position) {
+            alert("緯度:"+position.coords.latitude+",経度"+position.coords.longitude);
+        },
+        // 取得失敗した場合
+        function(error) {
+          switch(error.code) {
+            case 1: //PERMISSION_DENIED
+              alert("位置情報の利用が許可されていません");
+              break;
+            case 2: //POSITION_UNAVAILABLE
+              alert("現在位置が取得できませんでした");
+              break;
+            case 3: //TIMEOUT
+              alert("タイムアウトになりました");
+              break;
+            default:
+              alert("その他のエラー(エラーコード:"+error.code+")");
+              break;
+          }
+        }
+      );
+    }
+  </script>
+          </body>
+            </html>

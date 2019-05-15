@@ -1,0 +1,21 @@
+.main {
+background-color: blue;
+margin 0px;
+padding 30px;
+}
+
+#cont {
+    width: 100%;
+    font-size: 75px;
+    text-align: center;
+    color: white;
+}
+
+body {
+margin: 0;
+padding: 0;
+}
+
+p {
+color: blue;
+}
