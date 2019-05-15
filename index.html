@@ -9,15 +9,17 @@
       <div class="main">
         <div id="cont">神戸市民の声</div>
         </div>
-      <p>お名前<br>
-      <input type="text" name="name"></p>
-      <p>問題箇所の詳細<br>
-        <textarea name="comment" cols="40" rows="8">
+        <div class="name"><p>お名前</p>
+          <input type="text" name="name" class="name-field">
+          <div class="name"><p>問題箇所の内容</p>
+        <textarea type="comment" comment="comment"  class="comment-field" cols="50" rows="14">
           </textarea>
+          <p>あんぱんまン</p>
           <input type="file" id="target" accept="image/*">
           <script src="js/pbl.js"></script>
           <img id="myImage" width="220" height="200">
 
+          <p>ばいきんまｍ</p>
           <button onclick="getPosition();">位置情報を取得する</button>
           <input type="text" id="target" accept="getPosition">
 
