@@ -16,9 +16,10 @@
         <textarea type="comment" comment="comment"  class="comment-field" cols="50" rows="14">
           </textarea>
           <p>写真選択</p>
-          <input type="file" id="target" accept="image/*">
+          <div class="image">
+            <input type="file" id="target" accept="image/*"></div>
           <script src="js/pbl.js"></script>
-          <img id="myImage" width="220" height="200">
+          <img id="myImage" width="300" height="240">
 
           <p>位置情報</p>
           <button onclick="getPosition();">位置情報を取得する</button>
@@ -29,21 +30,12 @@
 
 
           <script>
-    // Geolocation APIに対応している
-    if (navigator.geolocation) {
-      alert("この端末では位置情報が取得できます");
-    // Geolocation APIに対応していない
-    } else {
-      alert("この端末では位置情報が取得できません");
-    }
-
     // 現在地取得処理
     function getPosition() {
       // 現在地を取得
       navigator.geolocation.getCurrentPosition(
         // 取得成功した場合
         function(position) {
-            alert("緯度:"+position.coords.latitude+",経度"+position.coords.longitude);
 						//document.getElementById("latitude").innerHTML = position.coords.latitude;
 						//document.getElementById("longitude").innerHTML = position.coords.longitude;
 						document.getElementById("position").value = position.coords.latitude + "," + position.coords.longitude;
