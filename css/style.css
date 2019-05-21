@@ -1,5 +1,4 @@
 .main {
-background-color: blue;
 margin 0px;
 padding 0px;
 }
@@ -8,7 +7,7 @@ padding 0px;
     width: 100%;
     font-size: 75px;
     text-align: center;
-    color: white;
+    color: red;
 }
 
 body {
@@ -16,11 +15,12 @@ margin: 0px;
 padding: 0px;
 width: 100%;
 height: auto;
+background-color: #ffff99;
 }
 
 .name {
 text-align: center;
-color: blue;
+color: red;
 font-size: 55px;
 font-family: sans-serif;
 }
@@ -38,11 +38,12 @@ text-align: center;
 }
 
 #ido {
-color: blue;
+color: red;
 font-size: 30px;
 }
 
 #keido {
-color: blue;
+color: red;
 font-size: 30px;
 }
+
