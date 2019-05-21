@@ -24,6 +24,7 @@
           <p>位置情報</p>
           <button onclick="getPosition();">位置情報を取得する</button>
           <input type="text" id="position" accept="getPosition" >
+          <input type="text" id="position2" accept="getPosition" >
 					<div id="latitude"></div>
 					<div id="longitude"></div>
           <p><input type="button" value="送信する" id="button1"></p>
@@ -36,9 +37,9 @@
       navigator.geolocation.getCurrentPosition(
         // 取得成功した場合
         function(position) {
-						//document.getElementById("latitude").innerHTML = position.coords.latitude;
-						//document.getElementById("longitude").innerHTML = position.coords.longitude;
-						document.getElementById("position").value = position.coords.latitude + "," + position.coords.longitude;
+						document.getElementById("position").value = position.coords.latitude;
+						document.getElementById("position2").value = position.coords.longitude;
+						//document.getElementById("position").value = position.coords.latitude + "," + position.coords.longitude;
         },
         // 取得失敗した場合
         function(error) {
@@ -59,6 +60,6 @@
         }
       );
     }
-  </script>
+          </script>
           </body>
             </html>
