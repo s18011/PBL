@@ -1,3 +1,7 @@
+function alertFunction1() {
+  alert("送信が完了しました。")
+}
+
 const target = document.getElementById('target');
 target.addEventListener('change', function (e) {
     const file = e.target.files[0]
@@ -37,3 +41,6 @@ target.addEventListener('change', function (e) {
         }
       );
     }
+function sousin() {
+  document.Main.submit();
+}
